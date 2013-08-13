@@ -4,10 +4,8 @@ PODS:
   - BrynKit/Main (1.3.0):
     - libextobjc/EXTConcreteProtocol
     - libextobjc/EXTScope
-    - ObjectiveSugar
   - GCDThreadsafe (0.1.1):
     - libextobjc (~> 0.2.5)
-  - JRSwizzle (1.0)
   - Kiwi (2.2)
   - libextobjc (0.2.5):
     - libextobjc/EXTADT
@@ -94,39 +92,22 @@ PODS:
   - libextobjc/RuntimeExtensions (0.2.5)
   - libextobjc/UmbrellaHeader (0.2.5)
   - libffi (3.0.13)
-  - ObjectiveSugar (0.9)
-  - ReactiveCocoa (1.9.6):
-    - ReactiveCocoa/Core
-    - ReactiveCocoa/RACExtensions
-  - ReactiveCocoa/Core (1.9.6):
-    - JRSwizzle (~> 1.0)
-    - libextobjc/EXTConcreteProtocol (~> 0.2.5)
-    - libextobjc/EXTKeyPathCoding (~> 0.2.5)
-    - libextobjc/EXTScope (~> 0.2.5)
-  - ReactiveCocoa/RACExtensions (1.9.6):
-    - ReactiveCocoa/Core
 
 DEPENDENCIES:
-  - BrynKit (from `~/projects/BrynKit/master`)
+  - BrynKit (~> 1.3.0)
   - GCDThreadsafe (from `~/projects/_obj-c/GCDThreadsafe`)
   - Kiwi
   - libextobjc (~> 0.2.5)
-  - ReactiveCocoa (~> 1.9.6)
 
 EXTERNAL SOURCES:
-  BrynKit:
-    :path: ~/projects/BrynKit/master
   GCDThreadsafe:
     :path: ~/projects/_obj-c/GCDThreadsafe
 
 SPEC CHECKSUMS:
-  BrynKit: d694617e2463dfb4b5e335f72b593584eeac2dc2
+  BrynKit: f529622f68fe5a9fbdb3896ef6f16fbe871f4e80
   GCDThreadsafe: 0b901736b9593eb78da9082016af339eb4c3f314
-  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
   Kiwi: db174bba4ee8068b15d7122f1b22fb64b7c1d378
   libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
   libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
-  ObjectiveSugar: 5b33fb396f3e93c0a543bdf55d2d48f29ee46bfb
-  ReactiveCocoa: 0586996422c05830e2f70ca8c8a5214e9070983f
 
 COCOAPODS: 0.23.0

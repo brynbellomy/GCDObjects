@@ -24,36 +24,6 @@
 #define COCOAPODS_VERSION_MINOR_GCDThreadsafe 1
 #define COCOAPODS_VERSION_PATCH_GCDThreadsafe 1
 
-// JRSwizzle
-#define COCOAPODS_POD_AVAILABLE_JRSwizzle
-#define COCOAPODS_VERSION_MAJOR_JRSwizzle 1
-#define COCOAPODS_VERSION_MINOR_JRSwizzle 0
-#define COCOAPODS_VERSION_PATCH_JRSwizzle 0
-
-// ObjectiveSugar
-#define COCOAPODS_POD_AVAILABLE_ObjectiveSugar
-#define COCOAPODS_VERSION_MAJOR_ObjectiveSugar 0
-#define COCOAPODS_VERSION_MINOR_ObjectiveSugar 9
-#define COCOAPODS_VERSION_PATCH_ObjectiveSugar 0
-
-// ReactiveCocoa
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 1
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 9
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 6
-
-// ReactiveCocoa/Core
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 1
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 9
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 6
-
-// ReactiveCocoa/RACExtensions
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_RACExtensions
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_RACExtensions 1
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_RACExtensions 9
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_RACExtensions 6
-
 // libextobjc
 #define COCOAPODS_POD_AVAILABLE_libextobjc
 #define COCOAPODS_VERSION_MAJOR_libextobjc 0
