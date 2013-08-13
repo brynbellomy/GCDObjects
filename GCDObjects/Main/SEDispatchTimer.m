@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 bryn austin bellomy. All rights reserved.
 //
 
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import <ReactiveCocoa/RACSignal+Private.h>
 #import <libextobjc/EXTScope.h>
 #import <BrynKit/BrynKit.h>
 #import <GCDThreadsafe/GCDThreadsafe.h>
