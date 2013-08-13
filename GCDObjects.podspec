@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     # s.platform     = :ios, '6.1'
 
     s.author       = { 'bryn austin bellomy' => 'bryn@signals.io' }
-    s.summary      = 'Make damned sure your concurrent code executes the way it oughta.  And break its kneecaps if it doesn\'t.'
+    s.summary      = 'Simple object wrappers providing a safer, more error-graceful interface to libdispatch (GCD).'
     s.homepage     = 'http://github.com/brynbellomy/GCDObjects'
     s.license      = { :type => 'WTFPL', :file => 'LICENSE.md' }
 
