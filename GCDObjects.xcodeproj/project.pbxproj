@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38182A6CB1A94499A705EE28 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B61266427E714258B8C040B5 /* libPods.a */; };
+		C598783417B8CC8000ED4A68 /* SEDispatchSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C598783317B8CC8000ED4A68 /* SEDispatchSourceSpec.m */; };
+		C5DA5FB017A794CA00857044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FAF17A794CA00857044 /* Foundation.framework */; };
+		C5DA5FBF17A794CB00857044 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FBE17A794CB00857044 /* SenTestingKit.framework */; };
+		C5DA5FC117A794CB00857044 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FC017A794CB00857044 /* UIKit.framework */; };
+		C5DA5FC217A794CB00857044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FAF17A794CA00857044 /* Foundation.framework */; };
+		C5DA5FC517A794CB00857044 /* libGCDObjects.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FAC17A794CA00857044 /* libGCDObjects.a */; };
+		C5DA5FCB17A794CB00857044 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5DA5FC917A794CB00857044 /* InfoPlist.strings */; };
+		C5FF400417B6DB8A0038E79C /* SEDispatchSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF3FFE17B6DB8A0038E79C /* SEDispatchSource.m */; };
+		C5FF400517B6DB8A0038E79C /* SEDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF400017B6DB8A0038E79C /* SEDispatchTimer.m */; };
+		CF75B9F66E6247C7AFBD4B70 /* libPods-GCDObjectsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9F761885954E34852DE56F /* libPods-GCDObjectsTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5DA5FC317A794CB00857044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5DA5FA417A794CA00857044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5DA5FAB17A794CA00857044;
+			remoteInfo = GCDObjects;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C5DA5FAA17A794CA00857044 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B9F761885954E34852DE56F /* libPods-GCDObjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCDObjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E66CE8091AE46B79DBE9779 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		B61266427E714258B8C040B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C598783317B8CC8000ED4A68 /* SEDispatchSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDispatchSourceSpec.m; sourceTree = "<group>"; };
+		C5DA5FAC17A794CA00857044 /* libGCDObjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDObjects.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5DA5FAF17A794CA00857044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C5DA5FB317A794CA00857044 /* GCDObjects-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCDObjects-Prefix.pch"; sourceTree = "<group>"; };
+		C5DA5FBD17A794CB00857044 /* GCDObjectsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDObjectsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5DA5FBE17A794CB00857044 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C5DA5FC017A794CB00857044 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C5DA5FC817A794CB00857044 /* GCDObjectsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GCDObjectsTests-Info.plist"; sourceTree = "<group>"; };
+		C5DA5FCA17A794CB00857044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5FF3FFD17B6DB8A0038E79C /* SEDispatchSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEDispatchSource.h; sourceTree = "<group>"; };
+		C5FF3FFE17B6DB8A0038E79C /* SEDispatchSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDispatchSource.m; sourceTree = "<group>"; };
+		C5FF3FFF17B6DB8A0038E79C /* SEDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEDispatchTimer.h; sourceTree = "<group>"; };
+		C5FF400017B6DB8A0038E79C /* SEDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDispatchTimer.m; sourceTree = "<group>"; };
+		C9E0E06EAB4641E39DE0CFC3 /* Pods-GCDObjectsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDObjectsTests.xcconfig"; path = "Pods/Pods-GCDObjectsTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5DA5FA917A794CA00857044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5DA5FB017A794CA00857044 /* Foundation.framework in Frameworks */,
+				38182A6CB1A94499A705EE28 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5DA5FB917A794CB00857044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5DA5FBF17A794CB00857044 /* SenTestingKit.framework in Frameworks */,
+				C5DA5FC117A794CB00857044 /* UIKit.framework in Frameworks */,
+				C5DA5FC217A794CB00857044 /* Foundation.framework in Frameworks */,
+				C5DA5FC517A794CB00857044 /* libGCDObjects.a in Frameworks */,
+				CF75B9F66E6247C7AFBD4B70 /* libPods-GCDObjectsTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5DA5FA317A794CA00857044 = {
+			isa = PBXGroup;
+			children = (
+				C5DA5FB117A794CA00857044 /* GCDObjects */,
+				C5DA5FC617A794CB00857044 /* GCDObjectsTests */,
+				C5DA5FAE17A794CA00857044 /* Frameworks */,
+				C5DA5FAD17A794CA00857044 /* Products */,
+				5E66CE8091AE46B79DBE9779 /* Pods.xcconfig */,
+				C9E0E06EAB4641E39DE0CFC3 /* Pods-GCDObjectsTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		C5DA5FAD17A794CA00857044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5DA5FAC17A794CA00857044 /* libGCDObjects.a */,
+				C5DA5FBD17A794CB00857044 /* GCDObjectsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5DA5FAE17A794CA00857044 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5DA5FAF17A794CA00857044 /* Foundation.framework */,
+				C5DA5FBE17A794CB00857044 /* SenTestingKit.framework */,
+				C5DA5FC017A794CB00857044 /* UIKit.framework */,
+				B61266427E714258B8C040B5 /* libPods.a */,
+				4B9F761885954E34852DE56F /* libPods-GCDObjectsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5DA5FB117A794CA00857044 /* GCDObjects */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF3FFC17B6DB8A0038E79C /* Main */,
+				C5DA5FB217A794CA00857044 /* Supporting Files */,
+			);
+			path = GCDObjects;
+			sourceTree = "<group>";
+		};
+		C5DA5FB217A794CA00857044 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5DA5FB317A794CA00857044 /* GCDObjects-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5DA5FC617A794CB00857044 /* GCDObjectsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C598783317B8CC8000ED4A68 /* SEDispatchSourceSpec.m */,
+				C5DA5FC717A794CB00857044 /* Supporting Files */,
+			);
+			path = GCDObjectsTests;
+			sourceTree = "<group>";
+		};
+		C5DA5FC717A794CB00857044 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5DA5FC817A794CB00857044 /* GCDObjectsTests-Info.plist */,
+				C5DA5FC917A794CB00857044 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5FF3FFC17B6DB8A0038E79C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF3FFD17B6DB8A0038E79C /* SEDispatchSource.h */,
+				C5FF3FFE17B6DB8A0038E79C /* SEDispatchSource.m */,
+				C5FF3FFF17B6DB8A0038E79C /* SEDispatchTimer.h */,
+				C5FF400017B6DB8A0038E79C /* SEDispatchTimer.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5DA5FAB17A794CA00857044 /* GCDObjects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5DA5FD117A794CB00857044 /* Build configuration list for PBXNativeTarget "GCDObjects" */;
+			buildPhases = (
+				53E653B7D967435383899013 /* Check Pods Manifest.lock */,
+				C5DA5FA817A794CA00857044 /* Sources */,
+				C5DA5FA917A794CA00857044 /* Frameworks */,
+				C5DA5FAA17A794CA00857044 /* CopyFiles */,
+				39F15E112F8B42E983325713 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCDObjects;
+			productName = GCDObjects;
+			productReference = C5DA5FAC17A794CA00857044 /* libGCDObjects.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C5DA5FBC17A794CB00857044 /* GCDObjectsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5DA5FD417A794CB00857044 /* Build configuration list for PBXNativeTarget "GCDObjectsTests" */;
+			buildPhases = (
+				DAF3ED4AE1AB4AF789ED363A /* Check Pods Manifest.lock */,
+				C5DA5FB817A794CB00857044 /* Sources */,
+				C5DA5FB917A794CB00857044 /* Frameworks */,
+				C5DA5FBA17A794CB00857044 /* Resources */,
+				C5DA5FBB17A794CB00857044 /* ShellScript */,
+				2FD45F9AE589479EBEF3346C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5DA5FC417A794CB00857044 /* PBXTargetDependency */,
+			);
+			name = GCDObjectsTests;
+			productName = GCDObjectsTests;
+			productReference = C5DA5FBD17A794CB00857044 /* GCDObjectsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5DA5FA417A794CA00857044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "signalenvelope llc";
+			};
+			buildConfigurationList = C5DA5FA717A794CA00857044 /* Build configuration list for PBXProject "GCDObjects" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C5DA5FA317A794CA00857044;
+			productRefGroup = C5DA5FAD17A794CA00857044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5DA5FAB17A794CA00857044 /* GCDObjects */,
+				C5DA5FBC17A794CB00857044 /* GCDObjectsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5DA5FBA17A794CB00857044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5DA5FCB17A794CB00857044 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FD45F9AE589479EBEF3346C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-GCDObjectsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39F15E112F8B42E983325713 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53E653B7D967435383899013 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5DA5FBB17A794CB00857044 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		DAF3ED4AE1AB4AF789ED363A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5DA5FA817A794CA00857044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5FF400417B6DB8A0038E79C /* SEDispatchSource.m in Sources */,
+				C5FF400517B6DB8A0038E79C /* SEDispatchTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5DA5FB817A794CB00857044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C598783417B8CC8000ED4A68 /* SEDispatchSourceSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5DA5FC417A794CB00857044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5DA5FAB17A794CA00857044 /* GCDObjects */;
+			targetProxy = C5DA5FC317A794CB00857044 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5DA5FC917A794CB00857044 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5DA5FCA17A794CB00857044 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5DA5FCF17A794CB00857044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C5DA5FD017A794CB00857044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5DA5FD217A794CB00857044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E66CE8091AE46B79DBE9779 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/GCDObjects.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCDObjects/GCDObjects-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C5DA5FD317A794CB00857044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E66CE8091AE46B79DBE9779 /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/GCDObjects.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCDObjects/GCDObjects-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C5DA5FD517A794CB00857044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E0E06EAB4641E39DE0CFC3 /* Pods-GCDObjectsTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCDObjects/GCDObjects-Prefix.pch";
+				INFOPLIST_FILE = "GCDObjectsTests/GCDObjectsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C5DA5FD617A794CB00857044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E0E06EAB4641E39DE0CFC3 /* Pods-GCDObjectsTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCDObjects/GCDObjects-Prefix.pch";
+				INFOPLIST_FILE = "GCDObjectsTests/GCDObjectsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5DA5FA717A794CA00857044 /* Build configuration list for PBXProject "GCDObjects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5DA5FCF17A794CB00857044 /* Debug */,
+				C5DA5FD017A794CB00857044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5DA5FD117A794CB00857044 /* Build configuration list for PBXNativeTarget "GCDObjects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5DA5FD217A794CB00857044 /* Debug */,
+				C5DA5FD317A794CB00857044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5DA5FD417A794CB00857044 /* Build configuration list for PBXNativeTarget "GCDObjectsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5DA5FD517A794CB00857044 /* Debug */,
+				C5DA5FD617A794CB00857044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5DA5FA417A794CA00857044 /* Project object */;
+}

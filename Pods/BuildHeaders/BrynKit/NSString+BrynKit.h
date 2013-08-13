@@ -1,0 +1,1 @@
+../../../../../BrynKit/master/Main/NSString+BrynKit.h

@@ -1,0 +1,2 @@
+PODS_BRYNKIT_CLANG_ENABLE_MODULES = YES
+PODS_BRYNKIT_OTHER_LDFLAGS = -framework CoreGraphics -framework CoreVideo
