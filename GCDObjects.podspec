@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
       main.source_files = 'GCDObjects/Main/*.{m,h}'
 
       main.dependency 'libextobjc', '~> 0.2.5'
-      main.dependency 'BrynKit', '~> 1.3.0'
+      main.dependency 'BrynKit/Main', '~> 1.3.1'
       main.dependency 'GCDThreadsafe', '~> 0.1.1'
     end
 

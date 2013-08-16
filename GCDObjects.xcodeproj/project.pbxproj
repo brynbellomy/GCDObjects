@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		38182A6CB1A94499A705EE28 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B61266427E714258B8C040B5 /* libPods.a */; };
-		C598783417B8CC8000ED4A68 /* SEDispatchSourceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C598783317B8CC8000ED4A68 /* SEDispatchSourceSpec.m */; };
+		C57AF42117BDB0DF00D28DD2 /* SEDispatchSourceOrTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C57AF42017BDB0DF00D28DD2 /* SEDispatchSourceOrTypeSpec.m */; };
+		C598783417B8CC8000ED4A68 /* SEDispatchSourceAddTypeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C598783317B8CC8000ED4A68 /* SEDispatchSourceAddTypeSpec.m */; };
 		C5DA5FB017A794CA00857044 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FAF17A794CA00857044 /* Foundation.framework */; };
 		C5DA5FBF17A794CB00857044 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FBE17A794CB00857044 /* SenTestingKit.framework */; };
 		C5DA5FC117A794CB00857044 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA5FC017A794CB00857044 /* UIKit.framework */; };
@@ -46,7 +47,8 @@
 		4B9F761885954E34852DE56F /* libPods-GCDObjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCDObjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E66CE8091AE46B79DBE9779 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		B61266427E714258B8C040B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C598783317B8CC8000ED4A68 /* SEDispatchSourceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDispatchSourceSpec.m; sourceTree = "<group>"; };
+		C57AF42017BDB0DF00D28DD2 /* SEDispatchSourceOrTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDispatchSourceOrTypeSpec.m; sourceTree = "<group>"; };
+		C598783317B8CC8000ED4A68 /* SEDispatchSourceAddTypeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDispatchSourceAddTypeSpec.m; sourceTree = "<group>"; };
 		C5DA5FAC17A794CA00857044 /* libGCDObjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDObjects.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5DA5FAF17A794CA00857044 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5DA5FB317A794CA00857044 /* GCDObjects-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCDObjects-Prefix.pch"; sourceTree = "<group>"; };
@@ -140,7 +142,8 @@
 		C5DA5FC617A794CB00857044 /* GCDObjectsTests */ = {
 			isa = PBXGroup;
 			children = (
-				C598783317B8CC8000ED4A68 /* SEDispatchSourceSpec.m */,
+				C598783317B8CC8000ED4A68 /* SEDispatchSourceAddTypeSpec.m */,
+				C57AF42017BDB0DF00D28DD2 /* SEDispatchSourceOrTypeSpec.m */,
 				C5DA5FC717A794CB00857044 /* Supporting Files */,
 			);
 			path = GCDObjectsTests;
@@ -196,8 +199,8 @@
 				C5DA5FB817A794CB00857044 /* Sources */,
 				C5DA5FB917A794CB00857044 /* Frameworks */,
 				C5DA5FBA17A794CB00857044 /* Resources */,
-				C5DA5FBB17A794CB00857044 /* ShellScript */,
 				2FD45F9AE589479EBEF3346C /* Copy Pods Resources */,
+				C5DA5FBB17A794CB00857044 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -337,7 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C598783417B8CC8000ED4A68 /* SEDispatchSourceSpec.m in Sources */,
+				C598783417B8CC8000ED4A68 /* SEDispatchSourceAddTypeSpec.m in Sources */,
+				C57AF42117BDB0DF00D28DD2 /* SEDispatchSourceOrTypeSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

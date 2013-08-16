@@ -68,7 +68,7 @@ typedef void(^SEDispatchSourceHandlerBlock)(SEDispatchSource *);
 #pragma mark- Initializers
 #pragma mark-
 
-BKInitializersAreUnsupported( init );
+//BKInitializerIsUnsupported( init );
 
 /**
  * @param source An already-initialized `dispatch_source_t` that will fire the events handled by the returned `SEDispatchSource`.
@@ -77,8 +77,8 @@ BKInitializersAreUnsupported( init );
  * @param registration A block to execute when the `dispatch_source_t` finishes initializing.
  * @param cancelation A block to execute after the `dispatch_source_t` is canceled.
  */
-+ (instancetype) dispatchSourceWithSource:(dispatch_source_t)source
-                                  onQueue:(dispatch_queue_t)queue;
+//+ (instancetype) dispatchSourceWithSource:(dispatch_source_t)source
+//                                  onQueue:(dispatch_queue_t)queue;
 
 /**
  * @param type
@@ -106,8 +106,8 @@ BKInitializersAreUnsupported( init );
 
 
 
-- (instancetype) initWithSource:(dispatch_source_t)source
-                        onQueue:(dispatch_queue_t)queue;
+//- (instancetype) initWithSource:(dispatch_source_t)source
+//                        onQueue:(dispatch_queue_t)queue;
 
 /**
  * @param type
