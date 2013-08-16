@@ -2,6 +2,8 @@
 
 # // gcd objects
 
+[![Build Status](https://travis-ci.org/brynbellomy/GCDObjects.png)](https://travis-ci.org/brynbellomy/GCDObjects)
+
 description to come.  very simple at the moment anyhow.
 
 
