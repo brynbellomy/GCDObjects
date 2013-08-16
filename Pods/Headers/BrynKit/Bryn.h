@@ -1,1 +1,1 @@
-../../../../../BrynKit/master/Main/Bryn.h
+../../BrynKit/Main/Bryn.h

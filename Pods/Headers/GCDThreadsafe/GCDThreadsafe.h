@@ -1,1 +1,1 @@
-../../../../GCDThreadsafe/GCDThreadsafe/GCDThreadsafe.h
+../../GCDThreadsafe/GCDThreadsafe/GCDThreadsafe.h

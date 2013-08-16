@@ -1,1 +1,1 @@
-../../../../../BrynKit/master/Main/NSObject+BrynKitObjCRuntime.h
+../../BrynKit/Main/NSObject+BrynKitObjCRuntime.h

@@ -19,6 +19,13 @@ typedef NS_ENUM( NSUInteger, SEDispatchSourceState ) {
 
 typedef void(^SEDispatchSourceHandlerBlock)(SEDispatchSource *);
 
+#define gcd_releaseOnScopeExit(...) \
+        @onExit { gcd_release( (__VA_ARGS__) ); }
+
+#define gcd_retainUntilScopeExit(...) \
+        gcd_retain( (__VA_ARGS__) ); \
+        @onExit { gcd_release( (__VA_ARGS__) ); }
+
 
 
 /**
