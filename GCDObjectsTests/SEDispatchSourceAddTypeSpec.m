@@ -1,5 +1,5 @@
 //
-//  SEDispatchSourceSpec.m
+//  SEDispatchSourceAddTypeSpec.m
 //  GCDObjects
 //
 //  Created by bryn austin bellomy on 8.12.13.
@@ -9,11 +9,10 @@
 #import <libextobjc/EXTScope.h>
 #import "Kiwi.h"
 #import "SEDispatchSource.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
-SPEC_BEGIN(SEDispatchSourceSpec)
+SPEC_BEGIN(SEDispatchSourceAddTypeSpec)
 
-describe(@"SEDispatchSource", ^{
+describe(@"SEDispatchSource (type ADD)", ^{
     __block SEDispatchSource *source = [SEDispatchSource dispatchSourceWithType:DISPATCH_SOURCE_TYPE_DATA_ADD
                                                                          handle:0 mask:0
                                                                      queueLabel:"com.signalenvelope.SEDispatchSourceSpec.sourceQueue"

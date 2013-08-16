@@ -26,29 +26,53 @@
 BKImplementConvenienceInitializer( timer,WithIntervalInNanoseconds:, uint64_t, interval,
                                                             leeway:, uint64_t, leeway );
 
+BKImplementConvenienceInitializer( timer,WithIntervalInNanoseconds:, uint64_t, interval,
+                                                            leeway:, uint64_t, leeway,
+                                                             queue:, dispatch_queue_t, queue );
+
+
+- (instancetype) initWithIntervalInNanoseconds: (uint64_t)interval
+                                        leeway: (uint64_t)leeway
+                                         queue: (dispatch_queue_t)queue
+{
+    self = [super initWithType:DISPATCH_SOURCE_TYPE_TIMER
+                        handle:0 mask:0
+                         queue:queue];
+    if ( self )
+    {
+        [self commonInitWithInterval:interval leeway:leeway];
+    }
+    return self;
+}
+
 
 
 - (instancetype) initWithIntervalInNanoseconds:(uint64_t)interval
                                         leeway:(uint64_t)leeway
 {
     self = [super initWithType:DISPATCH_SOURCE_TYPE_TIMER
-                        handle:0
-                          mask:0
+                        handle:0 mask:0
                     queueLabel:"com.signalenvelope.SEDispatchTimer"
                      queueType:DISPATCH_QUEUE_SERIAL];
     if ( self )
     {
-        yssert_notNull( self.source );
-
-        _interval = interval;
-        _leeway   = leeway;
-
-        dispatch_source_set_timer( self.source,
-                                   dispatch_walltime( NULL, 0 ),
-                                   _interval,
-                                   _leeway );
+        [self commonInitWithInterval:interval leeway:leeway];
     }
     return self;
+}
+
+- (void) commonInitWithInterval: (uint64_t)interval
+                         leeway: (uint64_t)leeway
+{
+    yssert_notNull( self.source );
+
+    _interval = interval;
+    _leeway   = leeway;
+
+    dispatch_source_set_timer( self.source,
+                              dispatch_walltime( NULL, 0 ),
+                              _interval,
+                              _leeway );
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import <libextobjc/EXTScope.h>
+#import <libextobjc/EXTAnnotation.h>
 #import <GCDThreadsafe/GCDThreadsafe.h>
 #import <BrynKit/BrynKit.h>
 
@@ -27,22 +28,24 @@
 @end
 
 
-@implementation SEDispatchSource {}
 
+
+@implementation SEDispatchSource {}
 
 #pragma mark- Lifecycle
 #pragma mark-
 
+//@designatedInitializer( SEDispatchSource, initWithType:handle:mask:queue: );
+
 /** unsupported initializers */
 
-BKImplementUnsupportedInitializers( SEDispatchSource, initWithSource:onQueue:,
-                                    init );
+//BKImplementUnsupportedInitializers( init );
 
 
 /** convenience class initializers */
 
-BKImplementConvenienceInitializer( dispatchSource,WithSource:, dispatch_source_t, source,
-                                                     onQueue:, dispatch_queue_t,  queue );
+//BKImplementConvenienceInitializer( dispatchSource,WithSource:, dispatch_source_t, source,
+//                                                     onQueue:, dispatch_queue_t,  queue );
 
 BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_type_t, type,
                                                     handle:, uintptr_t, handle,
@@ -60,21 +63,22 @@ BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_typ
 - (instancetype) initWithType: (dispatch_source_type_t)type
                        handle: (uintptr_t)handle
                          mask: (unsigned long)mask
-                        queue: (dispatch_queue_t)queue
+                        queue: (dispatch_queue_t)foreignQueue
 {
-    gcd_retain( queue );
+    yssert_notNil( foreignQueue );
 
-    dispatch_source_t source = dispatch_source_create( type, handle, mask, queue );
-    yssert_notNil( source );
+    self = [super init];
+    if (self)
+    {
+        gcd_retainUntilScopeExit( queue );
 
-    @onExit {
-        gcd_release( source );
-        gcd_release( queue );
-    };
+        // create our local dispatch queue and point it at the foreign queue
+        _queue = dispatch_queue_create( "com.signalenvelope.GCDObjects.SEDispatchSource", DISPATCH_QUEUE_SERIAL );
+        dispatch_set_target_queue( _queue, foreignQueue );
 
-    id instance = [self initWithSource:source onQueue:queue];
-
-    return instance;
+        [self commonInitWithType:type handle:handle mask:mask];
+    }
+    return self;
 }
 
 
@@ -85,36 +89,31 @@ BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_typ
                    queueLabel: (char *)queueLabel
                     queueType: (dispatch_queue_attr_t)queueType
 {
-    dispatch_queue_t queue = dispatch_queue_create( queueLabel, queueType );
-    yssert_notNil( queue );
+    self = [super init];
+    if (self)
+    {
+        // create our local dispatch queue as a private queue
+        _queue = dispatch_queue_create( queueLabel, queueType );
 
-    self = [self initWithType:type handle:handle mask:mask queue:queue];
-    gcd_release( queue );
-
+        [self commonInitWithType:type handle:handle mask:mask];
+    }
     return self;
 }
 
 
 
-- (instancetype) initWithSource: (dispatch_source_t)source
-                        onQueue: (dispatch_queue_t)queue
+- (void) commonInitWithType: (dispatch_source_type_t)type
+                     handle: (uintptr_t)handle
+                       mask: (unsigned long)mask
 {
-    self = [super init];
+    yssert_notNil( _queue );
+    GCDInitializeQueue( _queue );
 
-    if (self)
-    {
-        yssert( dispatch_source_testcancel( source ) == 0, @"Don't pass an already-canceled dispatch_source_t to [SEDispatchSource initWithSource:onQueue:]." );
+    // create our dispatch source
+    _source = dispatch_source_create( type, handle, mask, _queue );
+    yssert_notNil( _source );
 
-        gcd_retain( queue );
-        _queue = queue;
-
-        gcd_retain( source );
-        _source = source;
-
-        _state  = SEDispatchSourceState_Suspended;
-    }
-
-    return self;
+    _state  = SEDispatchSourceState_Suspended;
 }
 
 
@@ -125,6 +124,9 @@ BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_typ
     {
         [self cancelImmediately];
     }
+
+    gcd_release( _queue );
+    gcd_release( _source );
 }
 
 
@@ -151,10 +153,10 @@ BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_typ
 
 - (void) resume
 {
-    @weakify(self);
+//    @weakify(self);
 
     [self runCriticalMutableSection:^{
-        @strongify(self);
+//        @strongify(self);
 
         yssert( self.state == SEDispatchSourceState_Suspended );
 
@@ -167,10 +169,10 @@ BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_typ
 
 - (void) cancel
 {
-    @weakify(self);
+//    @weakify(self);
 
     [self runCriticalMutableSection:^{
-        @strongify(self);
+//        @strongify(self);
 
         [self cancelImmediately];
     }];
@@ -189,11 +191,11 @@ BKImplementConvenienceInitializer( dispatchSource,WithType:, dispatch_source_typ
     }
 
     dispatch_source_cancel( self.source );
-    gcd_release( self.source );
-    self.source = nil;
-
-    gcd_release( self.queue );
-    self.queue = nil;
+//    gcd_release( self.source );
+//    self.source = nil;
+//
+//    gcd_release( self.queue );
+//    self.queue = nil;
 
     self.state = SEDispatchSourceState_Canceled;
 }

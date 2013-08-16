@@ -9,8 +9,15 @@
 
 #import "SEDispatchSource.h"
 
+@class SEDispatchTimer;
+
+typedef void(^SEDispatchTimerSourceHandlerBlock)(SEDispatchTimer *);
+
+
+
 @interface SEDispatchTimer : SEDispatchSource
 
+@property (atomic, copy, readwrite) SEDispatchTimerSourceHandlerBlock handler;
 @property (nonatomic, assign, readwrite) uint64_t interval;
 @property (nonatomic, assign, readwrite) uint64_t leeway;
 
@@ -33,6 +40,7 @@
  **/
 + (instancetype) timerWithIntervalInNanoseconds:(uint64_t)interval leeway:(uint64_t)leeway;
 
++ (instancetype) timerWithIntervalInNanoseconds:(uint64_t)interval leeway:(uint64_t)leeway queue:(dispatch_queue_t)queue;
 
 
 /**
@@ -44,7 +52,9 @@
  *
  * @see dispatch_source_set_timer
  **/
-- (instancetype)  initWithIntervalInNanoseconds:(uint64_t)interval leeway:(uint64_t)leeway;
+- (instancetype) initWithIntervalInNanoseconds:(uint64_t)interval leeway:(uint64_t)leeway;
+
+- (instancetype) initWithIntervalInNanoseconds:(uint64_t)interval leeway:(uint64_t)leeway queue:(dispatch_queue_t)queue;
 
 @end
 
