@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     #
 
     s.name         = 'GCDObjects'
-    s.version      = '0.0.1'
+    s.version      = '0.0.2'
 
     s.ios.deployment_target = '6.1'
     s.osx.deployment_target = '10.8'
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
       main.dependency 'libextobjc', '~> 0.2.5'
       main.dependency 'BrynKit/Main', '~> 1.3.1'
-      main.dependency 'GCDThreadsafe', '~> 0.1.2'
+      main.dependency 'GCDThreadsafe', '~> 0.1.3'
     end
 
 end
